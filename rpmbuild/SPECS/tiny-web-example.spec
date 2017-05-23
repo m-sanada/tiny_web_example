@@ -38,7 +38,8 @@ cd %{name}-%{version}
 %setup -T -D
 
 %build
-#RUBYDIR=/usr/bin/ruby rpmbuild/rules build
+RUBYDIR=/usr/bin/ruby
+rpmbuild/rules build
 
 %install
 [ -d ${RPM_BUILD_ROOT} ] && rm -rf ${RPM_BUILD_ROOT}
@@ -61,7 +62,8 @@ rsync -aHA `pwd`/contrib/etc/%{oname} ${RPM_BUILD_ROOT}/etc
 mkdir -p ${RPM_BUILD_ROOT}/var/log/%{oname}
 
 %clean
-RUBYDIR=/usr/bin/ruby rpmbuild/rules clean
+RUBYDIR=/usr/bin/ruby
+rpmbuild/rules clean
 rm -rf $RPM_BUILD_ROOT
 
 %post
