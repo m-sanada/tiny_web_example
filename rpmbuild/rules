@@ -7,8 +7,8 @@ build-stamp: bundle-install
 	touch $@
 bundle-install: bundle-install-stamp
 bundle-install-stamp:
-	(cd $(CURDIR)/webapi && rm -rf vendor/bundle && mkdir -p vendor/bundle && /var/lib/jenkins/.rbenv/shims/bundle install --standalone --path vendor/bundle)	
-	(cd $(CURDIR)/frontend && rm -rf vendor/bundle && mkdir -p vendor/bundle && /var/lib/jenkins/.rbenv/shims/bundle install --standalone --path vendor/bundle)	
+	(cd $(CURDIR)/webapi && rm -rf vendor/bundle && mkdir -p vendor/bundle && bundle install --standalone --path vendor/bundle)	
+	(cd $(CURDIR)/frontend && rm -rf vendor/bundle && mkdir -p vendor/bundle && bundle install --standalone --path vendor/bundle)	
 
 	# replace /usr/bin/ruby shebangs.
 	# unicorn shebang: /this/will/be/overwritten/or/wrapped/anyways/do/not/worry/ruby
