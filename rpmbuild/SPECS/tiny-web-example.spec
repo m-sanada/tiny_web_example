@@ -1,5 +1,7 @@
 %define _prefix_path opt/axsh
-%define _tiny_web_example_git_uri git://github.com/axsh/tiny_web_example.git
+#%define _tiny_web_example_git_uri git://github.com/axsh/tiny_web_example.git
+%define _tiny_web_example_git_uri git://github.com/m-sanada/tiny_web_example.git
+
 %define oname tiny-web-example
 
 %define release_id 1.daily
